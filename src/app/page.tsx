@@ -3,7 +3,6 @@ import styles from './page.module.css'
 
 export default function Home() {
   const foo = 'bar'
-  
   return (
     <main className={styles.main}>
       <div className={styles.description}>

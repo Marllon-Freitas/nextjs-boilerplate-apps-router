@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "prepare": "husky"
   },
   "dependencies": {
@@ -15,7 +16,15 @@
     "react-dom": "^18"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "npm run lint:fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx --no-install lint-staged"
+    }
   },
   "devDependencies": {
     "@eslint/js": "^8.50.0",
@@ -25,6 +34,7 @@
     "eslint": "^8.50.0",
     "eslint-config-next": "^14.2.5",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
