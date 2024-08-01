@@ -1,7 +1,9 @@
+import * as Styled from './styles'
+
 const Main = () => (
-  <main>
+  <Styled.Wrapper>
     <h1>Hello world</h1>
-  </main>
+  </Styled.Wrapper>
 )
 
 export default Main
