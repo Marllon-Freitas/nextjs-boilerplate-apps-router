@@ -9,14 +9,18 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
-    "plugin:@next/next/recommended"
+    "plugin:@next/next/recommended",
+    "plugin:storybook/recommended"
   ],
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "plugins": ["react-hooks", "prettier"],
+  "plugins": [
+    "react-hooks",
+    "prettier"
+  ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -25,11 +29,19 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "no-unused-vars": [
       "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
     ],
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
     ],
     "prettier/prettier": "error"
   }

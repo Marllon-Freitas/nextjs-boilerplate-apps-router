@@ -8,8 +8,24 @@ describe('<Main />', () => {
     const { container } = render(<Main />)
     // busca o elemento e verifica se ele existe
     expect(
-      screen.getByRole('heading', { name: /hello world/i })
+      screen.getByRole('heading', { name: /react avançado/i })
     ).toBeInTheDocument()
+
+    // verifica se a descrição padrão está presente
+    expect(
+      screen.getByText(/typescript, reactjs, nextjs and styled components/i)
+    ).toBeInTheDocument()
+
+    // verifica se o logo está presente
+    expect(screen.getByAltText('React Avançado Logo')).toBeInTheDocument()
+
+    // verifica se a ilustração está presente
+    expect(
+      screen.getByAltText('Um desenvolvedor de frente para uma tela com código')
+    ).toBeInTheDocument()
+
+    // gerar snapshot
+    expect(container.firstChild).toMatchSnapshot()
 
     // gerar snapshot
     expect(container.firstChild).toMatchSnapshot()
